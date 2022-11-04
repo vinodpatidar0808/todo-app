@@ -1,0 +1,181 @@
+/* 
+Importing font 
+font-family : Poppins 
+font-weigth: 400
+file : assets/fonts/Popppins-Regular.ttf
+*/
+
+@font-face {
+  font-family: Poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(139deg, #c13e3e 0%, #e6b332 100%);
+  /* background-size: cover; */
+  height: 100vh;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+main {
+  /* background-color: teal; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 50rem;
+  gap: 1rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  position: relative;
+  margin: 2rem;
+}
+
+h1::after {
+  content: '';
+  width: 3.3rem;
+  background-color: #fff;
+  height: 0.4rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1000px;
+}
+
+form {
+  width: 100%;
+  /* background: red; */
+  /* padding: 0; */
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+}
+
+input {
+  padding: 1rem 0.8rem;
+  /* margin: 0; */
+  width: 80%;
+  outline: none;
+  border: none;
+  /* height: 100%; */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+.icon-wrapper {
+  /* padding: 1rem 0.5rem; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.icon {
+  width: 18px;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-icon-wrapper {
+  background-color: #e9993d;
+}
+
+.delete-all-icon-wrapper {
+  background: #ec2c2c;
+}
+
+button {
+  width: 10%;
+}
+
+#todo-container {
+  width: 100%;
+  /* display: flex; */
+  margin-top: 3rem;
+}
+.todo {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  margin: 1.5rem 0;
+}
+.todo-input {
+  width: 70%;
+}
+
+.check-button {
+  background-color: #28a475;
+}
+
+.edit-button {
+  background-color: #007bff;
+}
+
+.delete-button {
+  background: #ec2c2c;
+}
+
+/* input[disabled]{
+    color: inherit;
+} */
+
+.strike-text {
+  text-decoration: line-through;
+  /* color: red; */
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .icon {
+    width: 14px;
+  }
+  input{
+      width: 70%;
+      padding: 0.8rem 0.5rem;
+  }
+
+  .todo-input{
+    width: 55%;
+  }
+  button{
+    width: 15%;
+  }
+
+}
